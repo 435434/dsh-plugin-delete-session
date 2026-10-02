@@ -1,0 +1,57 @@
+{
+  "name": "dsh-plugin-delete-session",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Adds a \"delete session\" row to the session \"...\" menu of DSH (permanent, no undo).",
+  "license": "MIT",
+  "author": "kunku",
+  "keywords": [
+    "dsh",
+    "deepseek-harness",
+    "cordis",
+    "plugin",
+    "session",
+    "delete"
+  ],
+  "meta": {
+    "title": "删除会话",
+    "description": "在会话「…」菜单中添加「删除会话」操作（彻底删除，不可恢复）。"
+  },
+  "icon": "./icon.svg",
+  "main": "index.js",
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "index.js",
+    "client.js",
+    "cordis.patch.yml",
+    "icon.svg",
+    "README.md",
+    "README.en.md",
+    "CHANGELOG.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "test": "node --test"
+  },
+  "dsh": {
+    "engines": {
+      "dsh": ">=0.2.0-rc.1"
+    },
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": [
+        "@deepseek-ai/dsh-client-locale",
+        "@deepseek-ai/dsh-client-ui-workspace"
+      ]
+    }
+  }
+}

@@ -1,0 +1,17 @@
+# Dependencies (a DSH plugin has none of its own)
+node_modules/
+pnpm-lock.yaml
+
+# Logs
+*.log
+logs/
+
+# Editors / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Local scratch
+tmp/

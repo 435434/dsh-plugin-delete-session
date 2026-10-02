@@ -1,0 +1,6 @@
+# Bundle layer for dsh-plugin-delete-session: mounts the plugin row into the
+# profile that installed this package. `plugin_manager install_bundle` also
+# selects this bundle, so nothing else has to be edited by hand.
+- insert:
+    - id: delete-session
+      name: 'dsh-plugin-delete-session'
